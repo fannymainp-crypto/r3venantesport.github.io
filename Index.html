@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revenantesport.com</title></title>
+    <style>
+        /* --- CSS: This controls the design --- */
+        :root {
+            --primary-color: #2563eb; /* Change this color to change the theme */
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 15px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">My Website</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- EDIT: Change your headline here -->
+        <h1>Welcome to Revenant Esport Wesite</h1>
+        <p>This website is build to introduce the members of RVE Clan</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- About Section -->
+        <div id="about" class="card">
+            <h2>About Me</h2>
+            <!-- EDIT: Change your text here -->
+            <p>Hello! I am a beginner web developer. I am learning how to code using my mobile device. This section is where you write your bio.</p>
+        </div>
+
+        <!-- Services/Portfolio Section -->
+        <div class="card">
+            <h2>What I Do</h2>
+            <ul>
+                <li>Web Design</li>
+                <li>Photography</li>
+                <li>Writing</li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="card">
+            <h2>Contact Me</h2>
+            <!-- EDIT: Change your email here -->
+            <p>Email me at: <a href="mailto:youremail@example.com">espanareehan@gmail.com</a></p>
+            <button onclick="alert('Thanks for clicking!')" class="btn" style="background:var(--primary-color); color:white;">Send Message</button>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Mobile Website</p>
+    </footer>
+
+    <script>
+        // --- JavaScript: This adds interactivity ---
+        console.log("Website loaded successfully!");
+        
+        // Simple smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
